@@ -5,7 +5,12 @@ const hbs     = require('hbs');
 const port = process.env.PORT || 3000;
 var app = express();
 
-app.set('view engine', 'hbs');
+//app.set('view engine', 'html');
+//app.engine('html', require('hbs')._express);
+
+app.set('view engine', 'html');
+app.engine('html', require('hbs').__express);
+
 app.use(express.static(__dirname + '/views'));
 hbs.registerPartials(__dirname + '/views/partials');
 
