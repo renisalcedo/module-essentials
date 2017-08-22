@@ -21,8 +21,11 @@ app.get('/', (req, res) => {
   res.render('index.hbs', {
     title: data.Page.title,
     desc:  data.Page.description,
+    repo:  data.Page.repository,
+
     author: data.Person.name,
-    github: data.Person.github
+    github: data.Person.github,
+    email:  data.Person.email
   });
 });
 
