@@ -3,3 +3,13 @@ div.search-bar {
   width: 55%;
   padding: 15px;
 }
+
+figure.category-icon {
+  padding: 55px;
+  font-size: 195%;
+  font-style: italic;
+  font-family: 'Lato';
+  color: #007bff;
+  font-weight: 300;
+  text-transform: uppercase;
+}
