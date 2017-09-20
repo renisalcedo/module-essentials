@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 export default class Footer extends Component {
   render() {
@@ -6,7 +7,7 @@ export default class Footer extends Component {
       <footer className="text-muted">
         <div className="container">
           <p className="float-right">
-          <a href="Link back to top goes here">Back to top</a>
+            <a href="/">Back to top</a>
           </p>
           <p>{this.props.title}</p>
         </div>
