@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-export default class Footer extends Component {
+class Footer extends Component {
   render() {
     return (
       <footer className="text-muted">
@@ -15,3 +15,5 @@ export default class Footer extends Component {
     );
   }
 };
+
+export default Footer;

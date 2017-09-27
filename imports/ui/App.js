@@ -9,7 +9,7 @@ import TitleBar from './TitleBar';
 import Footer from './Footer';
 import Category from './Category';
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <div>
@@ -30,3 +30,5 @@ App.propTypes = {
   PageInfo: PropTypes.object.isRequired,
   MyInfo: PropTypes.object.isRequired
 };
+
+export default App;

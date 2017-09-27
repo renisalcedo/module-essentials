@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class TitleBar extends Component {
+class TitleBar extends Component {
   render() {
     return (
       <section className="jumbotron text-center">
@@ -20,3 +20,5 @@ export default class TitleBar extends Component {
     );
   }
 };
+
+export default TitleBar;

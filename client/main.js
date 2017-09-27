@@ -10,7 +10,7 @@ import { Modules } from '../imports/api/modules';
 // UI
 import { PageInfo, MyInfo } from '../imports/utils';
 import App from '../imports/ui/App';
-import NotFound from '../imports/ui/NotFound';
+import {NotFound} from '../imports/ui/NotFound';
 
 Meteor.startup(() => {
   Tracker.autorun (() => {

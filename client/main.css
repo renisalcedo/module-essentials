@@ -14,3 +14,7 @@ figure.category-icon {
   font-weight: 300;
   text-transform: uppercase;
 }
+
+.spinner {
+  margin: 0 auto;
+}
