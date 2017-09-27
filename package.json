@@ -1,21 +1,16 @@
 {
   "name": "module-essentials",
-  "version": "1.0.0",
-  "description": "Reference for the different modules and their usage",
-  "main": "server.js",
+  "private": true,
   "scripts": {
-    "test": "mocha **/*.test.js",
-    "start": "node server.js"
+    "start": "meteor run"
   },
-  "author": "Reynaldo Salcedo",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.15.4",
-    "hbs": "^4.0.1",
-    "yargs": "^8.0.2"
-  },
-  "devDependencies": {
-    "expect": "^1.20.2",
-    "mocha": "^3.5.0"
+    "babel-runtime": "^6.20.0",
+    "meteor-node-stubs": "~0.2.4",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-loading": "^0.1.4",
+    "react-router": "^4.2.0"
   }
 }
