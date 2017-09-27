@@ -1,3 +1,4 @@
+/* CSS declarations go here */
 div.search-bar {
   margin: auto;
   width: 55%;
@@ -12,4 +13,8 @@ figure.category-icon {
   color: #007bff;
   font-weight: 300;
   text-transform: uppercase;
+}
+
+.spinner {
+  margin: 0 auto;
 }
