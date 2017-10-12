@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 export const NotFound = () => {
   return (
-    <h1>404 RESOURCE NOT FOUND</h1>
+    <div className="container">
+      <img src="../img/page-not-found-404.png" alt="404 Not Found Resource" />
+    </div>
   );
 };

@@ -29,6 +29,7 @@ class Category extends Component {
     super(props)
   }
 
+  // Will generate the category based on data
   renderModules(modules) {
     return modules.map((module, index) => {
       return (
@@ -51,6 +52,7 @@ class Category extends Component {
     }
     return (
       <div className="text-center" >
+      {/* All categories with their corresponding data */}
 
         <Development renderModules={this.renderModules(Categories.development)} />
 
