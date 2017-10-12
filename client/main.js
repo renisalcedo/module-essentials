@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, browserHistory } from 'react-router';
 import { Meteor } from 'meteor/meteor';
 import { Tracker } from 'meteor/tracker';
 
@@ -7,14 +8,18 @@ import { Tracker } from 'meteor/tracker';
 import { Modules } from '../imports/api/modules';
 
 // UI
-import { PageInfo, MyInfo } from '../imports/utils';
 import App from '../imports/ui/App';
 import {NotFound} from '../imports/ui/NotFound';
 
+const routes = (
+  <Router history={browserHistory} >
+    <Route path="/" component={App} />
+    <Route path="*" component={NotFound} />
+  </Router>
+);
+
 Meteor.startup(() => {
   Tracker.autorun (() => {
-    let modules = Modules.find().fetch();
-
-    ReactDOM.render(<App modules={modules} PageInfo={PageInfo} MyInfo={MyInfo}/>, document.getElementById('app'));
+    ReactDOM.render(routes, document.getElementById('app'));
   });
 });

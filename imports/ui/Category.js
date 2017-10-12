@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactLoading from 'react-loading';
 
+{/* REQUIRED MODULES FOR DEVELOPMENT */}
 import Development from './categories/Development';
 import Test from './categories/Test.js';
 import Utilities from './categories/Utilities.js';
@@ -10,92 +11,18 @@ import Data from './categories/Data.js';
 import Connection from './categories/Connection.js';
 import Templating from './categories/Templating.js';
 
-const data = [
-  {
-    development: [
-      {_id: "1", name: "ExpressJS", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-      {_id: "1", name: "ExpressJS", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-      {_id: "1", name: "ExpressJS", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-            {_id: "1", name: "ExpressJS", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-      {_id: "1", name: "ExpressJS", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-      {_id: "1", name: "ExpressJS", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"}
-    ],
-    test: [
-      {_id: "2", name: "Mocha", description: "blabla", img: "img-logo", moduleUrl: "http"},
-      {_id: "2", name: "Mocha", description: "blabla", img: "img-logo", moduleUrl: "http"},
-{_id: "2", name: "Mocha", description: "blabla", img: "img-logo", moduleUrl: "http"},
-{_id: "2", name: "Mocha", description: "blabla", img: "img-logo", moduleUrl: "http"},
-{_id: "2", name: "Mocha", description: "blabla", img: "img-logo", moduleUrl: "http"}
-
-
-
-
-    ],
-    utilities: [
-      {_id: "1", name: "UtilityJs", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-{_id: "1", name: "UtilityJs", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-{_id: "1", name: "UtilityJs", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-{_id: "1", name: "UtilityJs", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-{_id: "1", name: "UtilityJs", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-      {_id: "1", name: "UtilityJs", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"}
-
-
-
-
-
-    ],
-    debugging: [
-      {_id: "2", name: "DebuggingJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-{_id: "2", name: "DebuggingJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-{_id: "2", name: "DebuggingJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-{_id: "2", name: "DebuggingJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-{_id: "2", name: "DebuggingJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-{_id: "2", name: "DebuggingJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-{_id: "2", name: "DebuggingJS", description: "blabla", img: "img-logo", moduleUrl: "http"}
-
-
-
-
-
-
-    ],
-    data: [
-      {_id: "1", name: "DataJS", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-{_id: "1", name: "DataJS", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-{_id: "1", name: "DataJS", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-{_id: "1", name: "DataJS", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-{_id: "1", name: "DataJS", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"},
-{_id: "1", name: "DataJS", description: "blablba", img: "img-logo", moduleUrl: "https://github.com/expressjs/express"}
-
-    ],
-    connection: [
-      {_id: "2", name: "ConnectionJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-      {_id: "2", name: "ConnectionJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-      {_id: "2", name: "ConnectionJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-      {_id: "2", name: "ConnectionJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-      {_id: "2", name: "ConnectionJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-    ],
-    templating: [
-      {_id: "2", name: "TemplatingJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-      {_id: "2", name: "TemplatingJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-      {_id: "2", name: "TemplatingJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-      {_id: "2", name: "TemplatingJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-      {_id: "2", name: "TemplatingJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-      {_id: "2", name: "TemplatingJS", description: "blabla", img: "img-logo", moduleUrl: "http"},
-    ]
-
-  }
-];
-
-const Categories = {
-  development: data[0].development,
-  test: data[0].test,
-  utilities: data[0].utilities,
-  debugging: data[0].debugging,
-  data: data[0].data,
-  connection: data[0].connection,
-  templating: data[0].templating
-};
+/*
+ *const Categories = {
+ *  development: data[0].development,
+ *  test: data[0].test,
+ *  utilities: data[0].utilities,
+ *  debugging: data[0].debugging,
+ *  data: data[0].data,
+ *  connection: data[0].connection,
+ *  templating: data[0].templating
+ *};
+ *
+ */
 
 class Category extends Component {
   constructor(props) {
@@ -116,6 +43,7 @@ class Category extends Component {
   }
 
   render() {
+    console.log(this.props.modules);
     if(this.props.modules.length < 1) {
       return (
         <ReactLoading className='spinner text-center' type="spinningBubbles" color="#33b5e5" />
@@ -123,6 +51,7 @@ class Category extends Component {
     }
     return (
       <div className="text-center" >
+
         <Development renderModules={this.renderModules(Categories.development)} />
 
         <Test renderModules={this.renderModules(Categories.test)} />

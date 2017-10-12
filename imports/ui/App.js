@@ -1,9 +1,12 @@
+// React required libraries
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { Modules } from './../api/modules';
-import { PageInfo, MyInfo } from './../utils';
+// App Info Components
+import { Modules } from '../api/modules';
+import { PageInfo, MyInfo } from '../utils'; // Contains all page related info
 
+// App Components
 import NavBar from './NavBar';
 import TitleBar from './TitleBar';
 import Footer from './Footer';
@@ -13,22 +16,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar description={this.props.PageInfo.description} github={this.props.MyInfo.github} email={this.props.MyInfo.email} />
+        <NavBar description={PageInfo.description} github={MyInfo.github} email={MyInfo.email} />
 
-        <TitleBar description={this.props.PageInfo.description} title={this.props.PageInfo.title} />
+        <TitleBar description={PageInfo.description} title={PageInfo.title} />
 
-        <Category modules={this.props.modules} />
+       {/* Sends as a prop the modules data*/}
+        <Category modules={Modules.find().fetch()} />
 
-        <Footer title={this.props.PageInfo.title} />
+        <Footer title={PageInfo.title} />
       </div>
     );
   }
-};
-
-App.propTypes = {
-  modules: PropTypes.array.isRequired,
-  PageInfo: PropTypes.object.isRequired,
-  MyInfo: PropTypes.object.isRequired
 };
 
 export default App;
