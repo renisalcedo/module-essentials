@@ -14,6 +14,7 @@ class Login extends Component {
 
   // Handles Signin from form
   onSubmit(e) {
+    e.preventDefault();
     let username = this.refs.username.value.trim();
     let password = this.refs.password.value.trim();
 
@@ -22,7 +23,8 @@ class Login extends Component {
       if(err) {
         this.setState({ error: err.reason });
       } else {
-        this.setState({ error: '' });
+        this.setState({ error: 'Sucess' });
+        console.log(username);
       }
     });
   }

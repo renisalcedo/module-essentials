@@ -32,14 +32,15 @@ class Signup extends Component {
   // Handles Signup errors
   onSubmit(e) {
     e.preventDefault();
-    let username = this.refs.username.value.slim();
-    let password = this.refs.password.value.slim();
+    let username = this.refs.username.value.trim();
+    let password = this.refs.password.value.trim();
 
     Accounts.createUser({username, password}, (err) => {
       if(err) {
         this.setState({error: err.reason});
       } else {
-        this.setState({error: ''});
+        this.setState({error: 'Success'});
+        console.log('Hi', username);
       }
     });
   }
